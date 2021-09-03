@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Car>
+
+@{
+    ViewBag.Title = "Car List";
+}
+<fieldset id="hyperlink">
+    <br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="text-center" scope="col"><h2>Cars</h2></th>
+            </tr>
+        </thead>
+    </table>
+
+    <ul class="text-center">
+        @foreach (Car c in Model)
+        {
+            <li>
+                <a asp-action="ViewCar" asp-route-id="@c.id">@c.Name</a><h2>@c.Model</h2>-<h2>@c.RegistrationDateAndTime</h2>
+            </li>
+        }
+    </ul>
+</fieldset><br>

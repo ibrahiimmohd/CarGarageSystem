@@ -1,0 +1,30 @@
+﻿@model Car
+@{
+    ViewBag.Title = "Thank You";
+}
+
+<form asp-action="ThankYou" method="Post">
+    <fieldset class="text-center">
+        <div><h2>Thank you!</h2></div>
+
+        <h1>
+            @Model.Model belongs to @Model.Name and it has been successfully registered as   @switch (@Model.Make)
+            {
+                case 1:
+                    @:Honda
+                    break;
+                case 2:
+                    @:Toyota
+                    break;
+                case 3:
+                    @:Volva
+                    break;
+                case 4:
+                    @:Lexus
+                    break;
+            } on @Model.RegistrationDateAndTime
+        </h1>
+    
+        <h3 id="typeOne">Click <a asp-action="List">here</a> to see car list.</h3><br>
+    </fieldset><br>
+</form>

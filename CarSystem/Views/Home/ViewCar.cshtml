@@ -1,0 +1,48 @@
+﻿@model Car
+
+@{
+    ViewBag.Title = "List of Cars";
+}
+
+<table class="table table-sm table-striped table-bordered">
+    <tr>
+        <td>License Plate</td>
+        <td>Owner's Name</td>
+        <td>Owner's Address</td>
+        <td>Car Make</td>
+        <td>Car Model</td>
+        <td>Additional Features</td>
+        <td>Date</td>
+
+    </tr>
+    <tr>
+        <td>@Model.LicensePlate</td>
+        <td>@Model.Name</td>
+        <td>@Model.Address</td>
+
+
+        <td>
+            @switch (@Model.Make)
+            {
+                case 1:
+                    @:Honda
+                    break;
+                case 2:
+                    @:Toyota
+                    break;
+                case 3:
+                    @:Volva
+                    break;
+                case 4:
+                    @:Lexus
+                    break;
+            }
+        </td>
+
+        <td>@Model.Model</td>
+        <td>@Model.AdditionalFeature</td>
+
+        <td>@Model.RegistrationDateAndTime</td>
+    </tr>
+
+</table>

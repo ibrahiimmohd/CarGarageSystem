@@ -1,0 +1,31 @@
+﻿body {
+}
+.logo {
+    width: 200px;
+}
+#typeOne {
+    font-size: large;
+    color: darkred;
+    text-align: center;
+}
+
+#hyperlink a {
+    text-decoration: none;
+    color: darkred;
+    padding-right: 2px;
+    padding-left: 2px;
+    font-size: large;
+    font-weight: bold;
+}
+
+    #hyperlink a:hover {
+        color: blue;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+h2 {
+    text-decoration: none;
+    color: darkred;
+    font-size: large;
+    font-weight: bold;
+}

@@ -1,0 +1,55 @@
+﻿@model Car
+
+@{
+    ViewBag.Title = "Add New Car";
+}
+
+<div class="panel panel-success">
+    <div class="panel-heading text-center"><h4>Car Registration Form</h4></div>
+    <div class="panel-body">
+        <form class="p-a-1 text-center" asp-action="Register" asp-controller="Home" method="post">
+
+
+
+            <div class="form-group">
+                <label asp-for="LicensePlate">License Plate:</label>
+                <input class="form-control" asp-for="LicensePlate" />
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="Name"> Owner's Name:</label>
+                <input class="form-control" asp-for="Name" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Address"> Owner's Address:</label>
+                <input class="form-control" asp-for="Address" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Make">Car's Make:</label>
+                <select asp-for="Make">
+                    <option value=""> Please Select</option>
+                    <option value="1">Honda</option>
+                    <option value="2">Toyota</option>
+                    <option value="3">Volvo</option>
+                    <option value="4">Lexus</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Model"> Car's Model:</label>
+                <input class="form-control" asp-for="Model" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Model"> Car's Additional Features:</label>
+                <input asp-for="AdditionalFeature" type="checkbox" value="4 Door">4 Door
+                <input asp-for="AdditionalFeature" type="checkbox" value="Electric">Electric
+                <input asp-for="AdditionalFeature" type="checkbox" value="4WD">4WD
+            </div>
+
+            <div class="text-center"><button class="btn btn-primary" type="submit">Register</button> | <button class="btn btn-primary" asp-action="Index">Cancel</button></div>
+        </form>
+    </div>
+</div>
